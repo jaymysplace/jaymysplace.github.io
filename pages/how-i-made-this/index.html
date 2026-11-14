@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="\style.css">
+		<title>How I made this</title>
+	</head>
+	<body>
+		<header>
+			<h1><a href="/" style="text-decoration:none;">⬅</a> How I made this</h1>
+		</header>
+				<sidebar>
+			Pages
+			<ul><li><a href="/pages/links-i-like/">Links I Like</a></li><li><a href="/pages/how-i-made-this/">How I made this</a></li><li><a href="/pages/now/">now</a></li><li><a href="/pages/thoughts-on-habit-tracking/">Thoughts on habit tracking</a></li><li><a href="/pages/less-stressful-listening-to-music/">Checklists + no music streaming = less stressful listening to music</a></li></ul>
+
+			Reviews
+			<ul><li><a href="/reviews/ready-player-two/">Ready Player Two</a></li><li><a href="/reviews/its-literally-just-mowing/">It's Literally Just Mowing</a></li><li><a href="/reviews/unpacking/">Unpacking</a></li></ul>
+		</sidebar>
+		<main>
+			<p>I followed the lovely guide <a href="https://whiona.weblog.lol/2023/10/my-neocities-workflow-using-eleventy-and-the-cli-to-speed-up-development">here</a>. I have no idea why but my Macbook really wanted to use an old version of Ruby, so I followed <a href="https://dev.to/luizgadao/easy-way-to-change-ruby-version-in-mac-m1-m2-and-m3-16hl">this guide</a> to get it to upgrade to a more recent version</p>
+<p>I use Visual Studio Code to write stuff. Then I use the Terminal in Visual Studio Code and type <code>npx @11ty/eleventy --serve</code>. In theory I don't need to add the <code>--serve</code> bit, but that starts up a local web server where I can preview the finished files.</p>
+<p>Once the newly-made static files look ok, I go back to the Terminal and press Ctrl+C to stop Eleventy, then type <code>neocities push _site/.</code> which uploads everything in the _site directory (ie all of the files that Eleventy just made)</p>
+
+		</main>
+		<footer>
+			<hr>
+			<p align="right"><small>I am on <a rel="me" href="https://kind.social/@jaymy">Mastodon</a> if you wanted to message or follow me.</small></p>
+		</footer>
+	</body>
+</html>

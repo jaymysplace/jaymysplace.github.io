@@ -1,0 +1,115 @@
+:root {
+    --dark: #2f2f2f;
+    --light: #a2a2a2;
+    --highlight1: #7CFFC4;
+    --highlight2: #c37aff;
+    --highlight3: #FFC37A;
+    --highlight4: #7FC8F8;
+    --highlight5: #E85D75;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Menlo', monospace;
+    margin-left: auto;
+    margin-right: auto;
+    width: 81%;
+    max-width: 800px;
+    display: grid;
+    grid-template-areas: 'header header' 'sidebar main' 'footer footer';
+    grid-template-columns: auto 65ch;
+    grid-column-gap: 20px;
+    line-height: 1.5em;
+}
+
+header {
+    grid-area: header;
+}
+
+sidebar {
+    grid-area: sidebar;
+    font-size: 0.81em;
+}
+
+sidebar ul {
+    padding-left: 0px
+    
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+a {
+    color: var(--highlight3);
+}
+
+h1 {
+    color: var(--highlight1);
+    line-height: 1.5em;
+}
+
+.rating1::after {
+    content: "★☆☆";
+    color: var(--highlight3);
+    font-size: 2em;
+}
+
+.rating2::after {
+    content: "★★☆";
+    color: var(--highlight3);
+    font-size: 2em;
+}
+
+.rating3::after {
+    content: "★★★";
+    color: var(--highlight3);
+    font-size: 2em;
+}
+
+div.review-factsheet {
+    display: grid;
+    grid-column-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 150px 150px;
+    grid-template-areas: 
+        'review-factsheet-facts review-factsheet-image';
+    margin: 20px;
+    width:min-content;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--light);
+    border-radius: 5px;
+    background-color: color-mix(in srgb, var(--light), transparent 80%);
+    float: left;
+}
+
+div.review-factsheet img {
+    grid-area: 'review-factsheet-image';
+    max-width: 150px;
+}
+
+div.review-factsheet ul {
+    grid-area: 'review-factsheet-facts';
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+sup.footnote-ref a {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    header {grid-area: 1 / span 2;}
+    main {grid-area: 2 / span 1;}
+    sidebar {grid-area: 2 / span 1; max-width: 200px;}
+}
