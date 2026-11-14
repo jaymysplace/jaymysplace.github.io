@@ -1,0 +1,23 @@
+:root {
+    --main-bg-color: #424342;
+    --main-text-color: #FFFFFF;
+    --accent-color-1: #6622CC;
+    --accent-color-2: #048BA8;
+    --highlight-color: #D2D7DF;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:any-link {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    background-image: linear-gradient(in oklch longer hue 90deg, var(--accent-color-1), var(--accent-color-1));
+    background-size: 100% 0.16em;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
